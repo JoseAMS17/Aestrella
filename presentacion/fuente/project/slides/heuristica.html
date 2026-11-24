@@ -1,0 +1,29 @@
+<section id="heuristica" data-transition="fade">
+<p class="eyebrow">06 · LA HEURÍSTICA</p>
+<div style="height:28px"></div>
+<h2>Distancia Manhattan, y una condición que lo decide todo</h2>
+<div style="height:40px"></div>
+<div class="fila">
+<div class="tarjeta" style="flex:1.1">
+<h3>La fórmula que usamos</h3>
+<p class="codigo-linea" style="font-size:30px">h = D · (dx + dy)</p>
+<p class="rotulo">Con movimiento en 4 direcciones: cuántos pasos en línea recta faltan si no hubiera obstáculos. <b class="ambar">D</b> es el costo del paso más barato.</p>
+<p class="pie-tarjeta">En el código, D se importa del laberinto: no está escrita a mano.</p>
+</div>
+<div class="tarjeta destacada" style="flex:1">
+<h3>Admisible</h3>
+<p class="rotulo">Una heurística es admisible si <b>nunca sobreestima</b> lo que falta.</p>
+<p class="rotulo"><b class="ambar">Solo con una heurística admisible A* garantiza la ruta óptima.</b></p>
+</div>
+</div>
+<div style="height:40px"></div>
+<table>
+<tr><th width="34%">Si h(n)…</th><th width="66%">Entonces A*…</th></tr>
+<tr><td><b class="mono">= 0</b></td><td><b>es</b> Dijkstra. Óptimo, pero explora muchísimo</td></tr>
+<tr><td><b class="mono">≤ costo real</b></td><td><b class="verde">garantiza la ruta óptima</b></td></tr>
+<tr><td><b class="mono">&gt; costo real</b></td><td><b class="rojo">ya no garantiza el óptimo</b>, aunque puede ser más rápido</td></tr>
+</table>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>Como nos movemos en cuatro direcciones, usamos la distancia Manhattan: la diferencia de filas más la diferencia de columnas. Y hay una condición que es la más importante de todo el proyecto: la heurística tiene que ser admisible, nunca puede sobrestimar lo que falta. Si estima de menos no pasa nada; si estima de más, A estrella deja de garantizar la ruta óptima.</aside>
+</section>

@@ -1,0 +1,29 @@
+<section id="no-usamos" data-transition="fade">
+<p class="eyebrow">07 · UNA DECISIÓN DOCUMENTADA</p>
+<div style="height:28px"></div>
+<h2>La fórmula que <i>no</i> usamos</h2>
+<div style="height:36px"></div>
+<p class="lead">Una de las referencias que nos dieron trae un código que calcula la heurística como distancia euclidiana <b>al cuadrado</b>.</p>
+<div style="height:36px"></div>
+<div class="codigo" style="font-size:30px"><span class="rojo">h = dx² + dy²</span>   <span class="comentario"># distancia euclidiana AL CUADRADO</span></div>
+<div style="height:40px"></div>
+<div class="fila">
+<div class="tarjeta">
+<h3 class="rojo">Por qué falla</h3>
+<p class="rotulo">El cuadrado crece mucho más rápido que g. Al sumar g + h, la heurística domina y <b>sobreestima</b>.</p>
+</div>
+<div class="tarjeta">
+<h3 class="rojo">La consecuencia</h3>
+<p class="rotulo">Deja de ser admisible, y en distancias largas A* <b>degenera en Greedy</b>: encuentra un camino, no el óptimo.</p>
+</div>
+<div class="tarjeta destacada">
+<h3>Qué hicimos</h3>
+<p class="rotulo">Descartarla. Nuestro enunciado pide la <b>ruta óptima</b>, y queda documentado en el encabezado de <b class="mono">heuristicas.py</b>.</p>
+</div>
+</div>
+<div style="height:32px"></div>
+<p class="nota">La página de heurísticas de Amit Patel dedica una sección a esa fórmula. Su veredicto, literal: «Do not do this!»</p>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>Esto no es teoría. Una de las referencias que nos dieron traía un código que usa la distancia euclidiana al cuadrado, y esa fórmula sobrestima. Nosotros no la usamos, y lo dejamos documentado en el código con la razón. La página de heurísticas de Amit Patel la prohíbe por nombre.</aside>
+</section>

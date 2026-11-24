@@ -1,0 +1,19 @@
+<section id="terminos" data-transition="fade">
+<p class="eyebrow">04 · LOS TRES TÉRMINOS</p>
+<div style="height:28px"></div>
+<h2>Qué significa cada letra</h2>
+<div style="height:48px"></div>
+<table>
+<tr><th width="16%">Término</th><th width="50%">Qué es</th><th width="34%">Naturaleza</th></tr>
+<tr><td><b class="ambar">g(n)</b></td><td>Costo <b>real y exacto</b> del camino desde A hasta n</td><td>Un hecho: ya se recorrió</td></tr>
+<tr><td><b class="ambar">h(n)</b></td><td>Costo <b>estimado</b> desde n hasta B</td><td>Una suposición: aún no ocurre</td></tr>
+<tr><td><b class="ambar">f(n)</b></td><td>Estimación del costo <b>total</b> del camino que pasa por n</td><td>La prioridad de la cola</td></tr>
+</table>
+<div style="height:56px"></div>
+<div class="codigo">g es lo que <b class="ambar">ya gastaste</b>.<br>h es lo que <b class="ambar">crees que te falta</b>.<br>f es lo que <b class="ambar">crees que te va a costar el viaje entero</b>.</div>
+<div style="height:32px"></div>
+<p class="nota">g se acumula paso a paso: g(vecino) = g(actual) + costo de entrar al vecino. Si el paso es diagonal, ese costo se multiplica por √2.</p>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>G es lo que ya gastaste: el costo real del camino desde A hasta la casilla donde estás, no es una estimación. H es lo que crees que te falta, una estimación de lo que cuesta ir desde donde estás hasta B: esa es la heurística. Y F es la suma, lo que crees que te va a costar el viaje completo si pasas por ahí.</aside>
+</section>

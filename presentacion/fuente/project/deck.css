@@ -1,0 +1,160 @@
+:root {
+  --fondo: #15161A;
+  --fondo-alt: #1C1E25;
+  --claro: #ECEEF2;
+  --tenue: #99A2B2;
+  --ambar: #F0C450;
+  --azul: #6FB3DC;
+  --verde: #68D391;
+  --rojo: #F08A86;
+  --linea: #30343E;
+}
+
+section {
+  background: var(--fondo);
+  color: var(--claro);
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  padding: 128px 128px 160px;
+  counter-increment: page;
+}
+
+h1 { font-size: 112px; font-weight: 600; line-height: 1.05; color: var(--claro); }
+h2 { font-size: 64px; font-weight: 600; line-height: 1.1; color: var(--claro); }
+h3 { font-size: 32px; font-weight: 600; line-height: 1.2; color: var(--ambar); }
+p  { font-size: 32px; line-height: 1.45; color: var(--claro); }
+
+/* ---------- piezas comunes ---------- */
+.eyebrow {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  color: var(--ambar);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+.lead { font-size: 36px; color: var(--tenue); line-height: 1.4; }
+.nota { font-size: 24px; color: var(--tenue); }
+.mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+.ambar { color: var(--ambar); }
+.azul { color: var(--azul); }
+.verde { color: var(--verde); }
+.rojo { color: var(--rojo); }
+.tenue { color: var(--tenue); }
+.regla {
+  border: none;
+  border-top: 4px solid var(--ambar);
+  width: 160px;
+  margin: 0;
+}
+
+.pie {
+  position: absolute;
+  left: 128px;
+  bottom: 64px;
+  width: 1300px;
+  font-size: 24px;
+  color: var(--tenue);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+.folio {
+  position: absolute;
+  right: 128px;
+  bottom: 64px;
+  width: 160px;
+  text-align: right;
+  font-size: 24px;
+  color: var(--tenue);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+.folio::after { content: counter(page); }
+
+/* ---------- tarjetas ---------- */
+.fila { display: flex; gap: 32px; }
+.col { display: flex; flex-direction: column; gap: 28px; }
+.crece { flex: 1; }
+
+.tarjeta {
+  background: var(--fondo-alt);
+  border: 1px solid var(--linea);
+  border-radius: 20px;
+  padding: 40px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.tarjeta .rotulo { font-size: 28px; color: var(--tenue); line-height: 1.4; }
+.tarjeta .cifra {
+  font-size: 80px;
+  font-weight: 700;
+  color: var(--ambar);
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  line-height: 1;
+}
+.tarjeta .pie-tarjeta { font-size: 24px; color: var(--tenue); }
+
+.destacada { border-color: var(--ambar); background: #241F13; }
+
+/* ---------- bloques de codigo y formulas ---------- */
+.codigo {
+  background: var(--fondo-alt);
+  border: 1px solid var(--linea);
+  border-left: 6px solid var(--ambar);
+  border-radius: 12px;
+  padding: 32px 36px;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 26px;
+  line-height: 1.55;
+  color: var(--claro);
+}
+.codigo-linea {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 26px;
+  line-height: 1.55;
+  color: var(--claro);
+}
+.comentario { color: var(--tenue); }
+
+.formula {
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-size: 108px;
+  font-weight: 700;
+  color: var(--claro);
+  line-height: 1.1;
+}
+
+/* ---------- tablas ---------- */
+table {
+  font-family: 'IBM Plex Sans', Arial, sans-serif;
+  font-size: 28px;
+  color: var(--claro);
+  width: 100%;
+}
+th { font-weight: 600; color: var(--ambar); }
+td { color: var(--claro); }
+
+/* ---------- lamina de afirmacion ---------- */
+.statement { background: var(--ambar); color: #15161A; }
+.statement h2 { color: #15161A; font-size: 88px; }
+.statement p { color: #3A2F12; }
+.statement .eyebrow { color: #4A3B14; }
+.statement .folio { color: #4A3B14; }
+.statement .pie { color: #4A3B14; }
+.statement .regla { border-top-color: #15161A; }
+
+/* ---------- portada ---------- */
+.portada { background: var(--fondo); }
+.portada h1 { font-size: 128px; }
+.portada .sub { font-size: 44px; color: var(--ambar); font-weight: 600; }
+.portada .meta { font-size: 28px; color: var(--tenue); line-height: 1.6; }
+
+/* ---------- imagenes ---------- */
+.captura {
+  border: 1px solid var(--linea);
+  border-radius: 12px;
+}
+.leyenda { font-size: 24px; color: var(--tenue); line-height: 1.4; }
+
+/* ---------- listas ---------- */
+ul { font-size: 32px; line-height: 1.5; color: var(--claro); padding-left: 36px; }
+li { margin-bottom: 14px; }
+.lista-tenue { font-size: 28px; color: var(--tenue); }

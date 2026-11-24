@@ -1,0 +1,25 @@
+<section id="nodos" data-section="Cómo el algoritmo organiza y recorre los nodos." data-transition="fade">
+<p class="eyebrow">08 · EL MANEJO DE LOS NODOS</p>
+<div style="height:24px"></div>
+<h2>Dos listas, y nada más</h2>
+<div style="height:40px"></div>
+<div class="fila">
+<div class="col" style="width:700px">
+<div class="tarjeta">
+<h3 class="azul">Lista abierta · la frontera</h3>
+<p class="rotulo">Casillas descubiertas pero <b>no</b> examinadas. Siempre sacamos la de <b>menor f</b>.</p>
+<p class="pie-tarjeta">Un montículo (<b class="mono">heapq</b>), no una lista que se recorre entera.</p>
+</div>
+<div class="tarjeta">
+<h3>Lista cerrada</h3>
+<p class="rotulo">Casillas <b>ya</b> examinadas, que no se vuelven a tocar.</p>
+<p class="pie-tarjeta">Un <b class="mono">set</b>: «¿está aquí?» es la pregunta más repetida del algoritmo.</p>
+</div>
+<p class="nota">Además, dos diccionarios: <b class="mono">g</b> con el costo real de cada nodo y <b class="mono">padre</b> con el rastro de migas para reconstruir el camino.</p>
+</div>
+<img src="/_blob/6afdb6d185d11b656c4865a5b66d9b14" alt="El programa a media búsqueda: en azul claro la frontera, en azul oscuro los nodos cerrados, y el panel mostrando g, h y f del nodo actual" width="900" height="455" style="object-fit:contain" class="captura">
+</div>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>Trabaja con dos listas. La lista abierta, que también llamamos la frontera: son las casillas que ya descubrimos pero todavía no examinamos, en azul claro. De esta lista siempre sacamos la de menor F. Y la lista cerrada: las que ya examinamos y no se vuelven a tocar, en azul oscuro. Fíjense en el panel: muestra la G, la H y la F de la casilla que se está examinando en este momento.</aside>
+</section>

@@ -1,0 +1,35 @@
+<section id="ciclo" data-transition="fade">
+<p class="eyebrow">09 · EL CICLO</p>
+<div style="height:24px"></div>
+<h2>Lo que se repite hasta llegar a la meta</h2>
+<div style="height:36px"></div>
+<div class="fila">
+<div class="codigo" style="flex:1.25; font-size:25px">
+<b class="ambar">1.</b> Si la lista abierta está vacía → no hay camino. Terminar.<br>
+<b class="ambar">2.</b> Sacar el nodo con <b class="ambar">menor f</b>.<br>
+<b class="ambar">3.</b> ¿Ya estaba cerrado? → descartarlo y volver a 1.<br>
+<b class="ambar">4.</b> ¿Es la meta? → terminar con éxito.<br>
+<b class="ambar">5.</b> Marcarlo como cerrado.<br>
+<b class="ambar">6.</b> Para cada vecino transitable:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;nuevo_g = g[actual] + costo del paso<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="comentario">si es nuevo, o nuevo_g mejora lo que teníamos:</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g[vecino] = nuevo_g<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padre[vecino] = actual<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;meter el vecino con prioridad nuevo_g + h(vecino)<br>
+<b class="ambar">7.</b> Volver a 1.
+</div>
+<div class="col" style="width:560px">
+<div class="tarjeta destacada">
+<h3>La meta se comprueba al <i>sacar</i></h3>
+<p class="rotulo">Nunca al insertar. Comprobarla al insertar parece funcionar y falla en cuanto hay costos distintos.</p>
+</div>
+<div class="tarjeta">
+<h3>La relajación</h3>
+<p class="rotulo">El paso 6 es lo que permite corregirse: una casilla se alcanza por varios caminos y nos quedamos con el mejor.</p>
+</div>
+</div>
+</div>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>El ciclo se repite hasta encontrar la meta. Sacamos la casilla con la F más baja, si es la meta terminamos, y si no la pasamos a la lista cerrada y miramos sus vecinos. Para cada vecino calculamos el nuevo G. Si el vecino es nuevo, o si llegamos por un camino más barato, actualizamos y lo metemos en la lista abierta. Ese paso tiene nombre: se llama relajación.</aside>
+</section>

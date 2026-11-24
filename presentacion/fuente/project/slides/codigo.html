@@ -1,0 +1,33 @@
+<section id="codigo" data-section="La estructura del código y cómo comprobamos que la ruta es óptima." data-transition="fade">
+<p class="eyebrow">15 · CÓMO SE ESTRUCTURÓ LA PROGRAMACIÓN</p>
+<div style="height:24px"></div>
+<h2>Seis archivos, una responsabilidad cada uno</h2>
+<div style="height:32px"></div>
+<div class="fila">
+<table style="width:860px; font-size:26px">
+<tr><th width="34%">Archivo</th><th width="48%">Responsabilidad</th><th width="18%">Líneas</th></tr>
+<tr><td class="mono">main.py</td><td>Arranque; comprueba pygame</td><td class="mono">26</td></tr>
+<tr><td class="mono">laberinto.py</td><td>La rejilla: casillas, vecinos y costos</td><td class="mono">168</td></tr>
+<tr><td class="mono">heuristicas.py</td><td>Las funciones h(n)</td><td class="mono">78</td></tr>
+<tr><td class="mono ambar"><b>astar.py</b></td><td><b class="ambar">El algoritmo</b></td><td class="mono ambar"><b>211</b></td></tr>
+<tr><td class="mono">juego.py</td><td>La interfaz: editor y animación</td><td class="mono">462</td></tr>
+<tr><td class="mono">prueba_consola.py</td><td>Las pruebas de corrección</td><td class="mono">163</td></tr>
+</table>
+<div class="col crece">
+<div class="tarjeta destacada">
+<h3>La decisión de diseño</h3>
+<p class="rotulo"><b class="mono">astar.py</b> no sabe que existe un laberinto. No importa pygame, no sabe qué es una pared. Solo pide:</p>
+<p class="codigo-linea" style="font-size:22px">laberinto.vecinos(actual)</p>
+</div>
+<div class="tarjeta">
+<h3>La consecuencia</h3>
+<p class="rotulo">Para una rejilla <b>hexagonal</b> no habría que tocar el algoritmo: solo los vecinos y la heurística.</p>
+</div>
+</div>
+</div>
+<div style="height:24px"></div>
+<p class="nota">Más de la mitad del programa es interfaz. El algoritmo en sí son 211 líneas, y sin comentarios, unas 80.</p>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>Son seis archivos, cada uno con una responsabilidad. La decisión de diseño más importante es que astar punto pe y no sabe que existe un laberinto: no sabe qué es una pared ni qué es una casilla, solo pide los vecinos de un nodo y lo que cuesta llegar a cada uno. Para el algoritmo todo es un grafo. Eso significa que para una rejilla hexagonal no habría que tocarlo.</aside>
+</section>

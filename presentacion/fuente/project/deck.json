@@ -1,0 +1,61 @@
+{
+  "v": 5,
+  "createdOnFiles": { "v": 1, "at": "2026-11-12T14:00:00Z" },
+  "lists": "css",
+  "format": { "v": 1, "shared": ["project/deck.css"] },
+  "title": "Algoritmo A* — ruta óptima en un laberinto",
+  "order": [
+    "portada",
+    "problema",
+    "dos-algoritmos",
+    "ecuacion",
+    "terminos",
+    "pesos",
+    "heuristica",
+    "no-usamos",
+    "nodos",
+    "ciclo",
+    "traza",
+    "laberinto",
+    "demo",
+    "comparacion",
+    "barro",
+    "codigo",
+    "verificacion",
+    "cierre",
+    "fuentes"
+  ],
+  "sections": {
+    "s1": {
+      "description": "El problema del laberinto y por qué A* son dos algoritmos trabajando juntos.",
+      "start": "portada"
+    },
+    "s2": {
+      "description": "La función de costo f = g + h y la heurística que elegimos.",
+      "start": "ecuacion"
+    },
+    "s3": {
+      "description": "Cómo el algoritmo organiza y recorre los nodos.",
+      "start": "nodos"
+    },
+    "s4": {
+      "description": "El programa funcionando y la comparación medida entre los tres modos.",
+      "start": "laberinto"
+    },
+    "s5": {
+      "description": "La estructura del código y cómo comprobamos que la ruta es óptima.",
+      "start": "codigo"
+    }
+  },
+  "faces": {
+    "ibm-plex-sans": {
+      "family": "IBM Plex Sans",
+      "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+    },
+    "jetbrains-mono": {
+      "family": "JetBrains Mono",
+      "href": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap"
+    }
+  },
+  "designSystems": []
+}

@@ -1,0 +1,51 @@
+def _prioridad(self, posicion, g):
+    """f(n) = g(n) + h(n), con los pesos que eligen el algoritmo."""
+    h = self.heuristica(posicion, self.meta) * (1.0 + self.epsilon)
+    return self.peso_g * g + self.peso_h * h
+
+def paso(self):
+    """Una expansion. True si queda trabajo, False si termino."""
+    if self.terminado:
+        return False
+    if not self.frontera:
+        self._finalizar(False)          # la frontera se vacio: no hay camino
+        return False
+
+    # 1. Sacar el nodo de menor prioridad.
+    _, _, actual = heapq.heappop(self.frontera)
+    self.en_frontera.discard(actual)
+
+    # Borrado perezoso: se descartan las entradas obsoletas en vez de
+    # modificar el monticulo por dentro, que romperia su invariante.
+    if actual in self.cerrados:
+        return True
+
+    self.actual = actual
+    self.cerrados.add(actual)
+    self.expandidos += 1
+
+    # 2. La meta se comprueba AL SACAR, nunca al insertar.
+    if actual == self.meta:
+        self._finalizar(True)
+        return False
+
+    # 3. Expandir los vecinos.
+    for vecino, costo_paso in self.laberinto.vecinos(actual):
+        nuevo_g = self.g[actual] + costo_paso
+
+        if self.relajar:
+            vale_la_pena = (vecino not in self.g
+                            or nuevo_g < self.g[vecino] - 1e-9)
+        else:
+            vale_la_pena = vecino not in self.g   # Greedy no reconsidera
+
+        if vale_la_pena:
+            self.g[vecino] = nuevo_g
+            self.padre[vecino] = actual
+            self._orden += 1
+            heapq.heappush(self.frontera,
+                           (self._prioridad(vecino, nuevo_g),
+                            self._orden, vecino))
+            self.en_frontera.add(vecino)
+
+    return True

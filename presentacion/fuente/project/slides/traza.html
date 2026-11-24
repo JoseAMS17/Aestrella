@@ -1,0 +1,38 @@
+<section id="traza" data-transition="fade">
+<p class="eyebrow">10 · EL ALGORITMO EN NÚMEROS</p>
+<div style="height:24px"></div>
+<h2>Las primeras expansiones, una por una</h2>
+<div style="height:32px"></div>
+<div class="fila">
+<div style="width:820px">
+<table style="font-size:26px">
+<tr><th width="16%">#</th><th width="30%">Expande</th><th width="18%">g</th><th width="18%">h</th><th width="18%">f</th></tr>
+<tr><td>1</td><td class="mono">(2,0)</td><td class="mono">0</td><td class="mono">6</td><td><b class="ambar mono">6</b></td></tr>
+<tr><td>2</td><td class="mono">(2,1)</td><td class="mono">1</td><td class="mono">5</td><td><b class="ambar mono">6</b></td></tr>
+<tr><td>3</td><td class="mono">(2,2)</td><td class="mono">2</td><td class="mono">4</td><td><b class="ambar mono">6</b></td></tr>
+<tr><td>4</td><td class="mono">(1,0)</td><td class="mono">1</td><td class="mono">7</td><td><b class="azul mono">8</b></td></tr>
+<tr><td>5</td><td class="mono">(3,0)</td><td class="mono">1</td><td class="mono">7</td><td><b class="azul mono">8</b></td></tr>
+<tr><td>6</td><td class="mono">(1,1)</td><td class="mono">2</td><td class="mono">6</td><td><b class="azul mono">8</b></td></tr>
+</table>
+<div style="height:20px"></div>
+<p class="nota">Laberinto de 8 × 8 con una pared vertical. Traza generada por el propio programa, no inventada.</p>
+</div>
+<div class="col" style="width:780px">
+<div class="tarjeta destacada">
+<h3>f se queda en 6</h3>
+<p class="rotulo">g sube 0 → 1 → 2 y h baja 6 → 5 → 4, <b>a la misma velocidad</b>. Cada unidad gastada compra una unidad de progreso: el camino es perfecto.</p>
+</div>
+<div class="tarjeta">
+<h3 class="azul">f salta a 8</h3>
+<p class="rotulo">Ahí A* se topó con la pared. <b>El salto de f es el precio del desvío</b>, y no lo paga hasta agotar todos los nodos de f = 6.</p>
+</div>
+<div class="tarjeta">
+<h3>El orden es por f</h3>
+<p class="rotulo">Expande (2,2), que está lejos de A, <b>antes</b> que (1,0), que es su vecino directo. Dijkstra habría hecho lo contrario.</p>
+</div>
+</div>
+</div>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>En las tres primeras filas f vale 6 y no cambia: g sube y h baja exactamente a la misma velocidad, así que esos pasos avanzan hacia la meta sin desperdiciar nada. En la fila 4 f salta a 8: ahí ya se topó con la pared y tiene que considerar el rodeo. El salto de f es el precio del desvío.</aside>
+</section>

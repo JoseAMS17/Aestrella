@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Intermedios de empaquetado y de revision
+build/
+dist/
+*.spec
+_qa/
+
+# Temporales de Office y de Windows
+~$*
+Thumbs.db
+desktop.ini

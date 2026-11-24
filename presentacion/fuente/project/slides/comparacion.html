@@ -1,0 +1,31 @@
+<section id="comparacion" data-transition="fade">
+<p class="eyebrow">13 · LOS TRES MODOS, EL MISMO LABERINTO</p>
+<div style="height:24px"></div>
+<h2>Misma búsqueda, distinta prioridad</h2>
+<div style="height:32px"></div>
+<div class="fila">
+<div style="width:528px; background:#241F13; border:1px solid #F0C450; border-radius:20px; padding:24px">
+<img src="/_blob/5c4df2e3e5fcf9d83287614e57262e6f" alt="A* resuelto: la ruta rodea el barro y la zona explorada se concentra hacia la meta" width="480" height="320" style="object-fit:contain" class="captura">
+<div style="height:16px"></div>
+<h3>A*</h3>
+<p class="rotulo">costo <b class="ambar mono">29,00</b><br>expandidos <b class="mono">111</b></p>
+</div>
+<div style="width:528px; background:#1C1E25; border:1px solid #30343E; border-radius:20px; padding:24px">
+<img src="/_blob/4b07c2b9794f7f84b84d5f14843e3455" alt="Dijkstra resuelto: la misma ruta, pero con casi todo el laberinto explorado" width="480" height="320" style="object-fit:contain" class="captura">
+<div style="height:16px"></div>
+<h3 class="azul">Dijkstra</h3>
+<p class="rotulo">costo <b class="mono">29,00</b><br>expandidos <b class="rojo mono">276</b></p>
+</div>
+<div style="width:528px; background:#1C1E25; border:1px solid #30343E; border-radius:20px; padding:24px">
+<img src="/_blob/f0a30f84ff7fd0fcc539f1a15d33ac36" alt="Greedy resuelto: explora poquísimo pero la ruta atraviesa la zona de barro" width="480" height="320" style="object-fit:contain" class="captura">
+<div style="height:16px"></div>
+<h3 class="azul">Greedy</h3>
+<p class="rotulo">costo <b class="rojo mono">53,00</b><br>expandidos <b class="mono">46</b></p>
+</div>
+</div>
+<div style="height:28px"></div>
+<p class="nota">Dijkstra llega al mismo resultado expandiendo <b class="ambar">un 60 % más</b> de nodos. Greedy explora muy poco, pero su ruta cuesta <b class="ambar">un 83 % más</b>.</p>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>El mismo laberinto con los tres modos. Dijkstra encontró la misma ruta con el mismo costo, pero miren los nodos expandidos: 276 contra 111. Exploró en todas las direcciones porque no sabía hacia dónde estaba B. Greedy fue rapidísimo, expandió solo 46 nodos, pero su costo es 53 contra 29.</aside>
+</section>

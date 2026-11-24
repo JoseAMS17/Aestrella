@@ -1,0 +1,27 @@
+<section id="verificacion" data-transition="fade">
+<p class="eyebrow">16 · CÓMO SABEMOS QUE ES ÓPTIMA</p>
+<div style="height:24px"></div>
+<h2>Dijkstra es el oráculo</h2>
+<div style="height:32px"></div>
+<p class="lead">Dijkstra siempre devuelve el costo óptimo verdadero. Si A* con nuestra heurística diera un costo distinto sobre el mismo laberinto, la heurística no sería admisible y habría un error.</p>
+<div style="height:40px"></div>
+<div class="fila">
+<div class="col" style="width:820px">
+<div class="codigo" style="font-size:24px">&gt; python prueba_consola.py<br><br>  <span class="comentario">A* = 29.00 = Dijkstra. La ruta es optima.</span><br>  <span class="comentario">A* expandio 165 nodos menos (60% menos).</span><br><br><b class="verde">RESULTADO: TODO CORRECTO</b></div>
+<p class="nota">Las pruebas no necesitan pygame: cubren la trampa en U, un laberinto aleatorio con barro, el mismo con 8 direcciones, el desempate, un laberinto sin solución y la comparación entre heurísticas.</p>
+</div>
+<div class="col crece">
+<div class="tarjeta destacada">
+<h3>Y además comprobamos</h3>
+<p class="rotulo">Que el camino empieza en A y acaba en B · que cada paso va a un vecino real · que <b>ninguna casilla es pared</b> · que el costo recalculado a mano coincide con el que declara el programa.</p>
+</div>
+<div class="tarjeta">
+<h3>El resultado</h3>
+<p class="rotulo">Los tres modos devuelven caminos <b class="verde">válidos</b>. A* y Dijkstra coinciden en costo <b>en todos los casos probados</b>.</p>
+</div>
+</div>
+</div>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>Nosotros no afirmamos que nuestro algoritmo encuentra la ruta óptima: lo comprobamos. Comparamos A estrella contra Dijkstra, que sí la garantiza, sobre varios laberintos. Si los costos no coincidieran, nuestra heurística estaría mal. Coinciden en todos los casos.</aside>
+</section>

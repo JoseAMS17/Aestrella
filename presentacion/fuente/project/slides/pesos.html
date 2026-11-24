@@ -1,0 +1,19 @@
+<section id="pesos" data-transition="fade">
+<p class="eyebrow">05 · UN SOLO BUSCADOR</p>
+<div style="height:28px"></div>
+<h2>No programamos tres algoritmos:<br>programamos uno con dos pesos</h2>
+<div style="height:40px"></div>
+<div class="codigo" style="font-size:34px">prioridad = <b class="ambar">peso_g</b> · g(n) + <b class="ambar">peso_h</b> · h(n)</div>
+<div style="height:44px"></div>
+<table>
+<tr><th width="20%">Modo</th><th width="13%">peso_g</th><th width="13%">peso_h</th><th width="32%">Qué mira</th><th width="22%">¿Ruta óptima?</th></tr>
+<tr><td><b class="ambar">A*</b></td><td><b class="mono">1</b></td><td><b class="mono">1</b></td><td>Lo que costó <b>y</b> lo que falta</td><td><b class="verde">Sí</b></td></tr>
+<tr><td>Dijkstra</td><td><b class="mono">1</b></td><td><b class="mono">0</b></td><td>Solo lo que costó</td><td><b class="verde">Sí</b>, explorando mucho más</td></tr>
+<tr><td>Greedy</td><td><b class="mono">0</b></td><td><b class="mono">1</b></td><td>Solo lo que falta</td><td><b class="rojo">No</b></td></tr>
+</table>
+<div style="height:40px"></div>
+<p class="nota">Apagar un término convierte A* en el otro algoritmo. En el programa se cambia con la tecla <b class="ambar">M</b>, sobre el mismo laberinto: eso es lo que permite comparar en vivo.</p>
+<p class="pie">Algoritmo A* · Ruta óptima en un laberinto</p>
+<p class="folio"></p>
+<aside>En nuestro programa esto es literal. No programamos tres algoritmos, programamos uno solo con dos pesos. Si apagamos el peso de h, queda Dijkstra. Si apagamos el de g, queda Greedy. Y se cambia con la tecla M sobre el mismo laberinto, así que la comparación es justa.</aside>
+</section>
